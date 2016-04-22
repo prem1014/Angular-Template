@@ -1,0 +1,19 @@
+/* Move down content because we have a fixed navbar that is 50px tall */
+
+/* Workaround for unwanted route changes due to empty href attributes - see http://angular-ui.github.io/bootstrap/ */
+.nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
+
+.btn{
+    font-size: smaller;
+    color: white;
+    background-color: black;
+    border-radius: 0px;
+    width: 70px;
+    height: 25px;
+    padding:0px;
+}
+
+.panel{
+	border-radius:0px;
+	border-color: #060606;
+}

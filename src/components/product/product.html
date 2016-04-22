@@ -1,0 +1,82 @@
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+    <div class="panel panel-default">
+        <div class="panel-heading product-panel">Trader Desktop</div>
+        <div class="row btn-panel">
+            <div class="col-lg-1 col-xs-3">
+                <button class="btn" data-toggle="modal" data-target="#myModal">Trade</button>
+            </div>
+            <div class="col-lg-1 col-xs-3">
+                <button class="btn">Delete All</button>
+            </div>
+            <div class="col-lg-1 col-xs-3">
+                <button class="btn btn-default" ng-click='refresh()'>Refresh</button>
+            </div>
+            <div class="col-lg-7">
+               
+            </div>
+            <div class="col-lg-1 col-xs-1">
+                <button class="btn" style="width: 30px;" ng-class='TblSelected' ng-click='showTabular()'><i class="fa fa-table"></button>
+            </div>
+            <div class="col-lg-1 col-xs-1">
+                <button class="btn" style="width: 30px;" ng-class='ChartSelected' ng-click='showChart()'><i class="fa fa-bar-chart"></i></button>
+            </div>
+        </div>
+        <div class="panel-body">
+         <div class="row grid-container" ng-if='toggleGridChart'>
+             <div class="col-lg-12">
+                 <div class="table-responsive">
+                     <table class="table">
+                         <thead>
+                             <tr class="tbl-header">
+                                 <td>Id</td>
+                                 <td>Creation Time</td>
+                                 <td>Side</td>
+                                 <td>Symbol</td>
+                                 <td>Quantity</td>
+                                 <td>Placed</td>
+                                 <td>Executed</td>
+                                 <td>Limit Price</td>
+                                 <td>Priority</td>
+                                 <td>Status</td>
+                                 <td>Trader Id</td>
+                             </tr>
+                         </thead>
+                         <tbody>
+                             <tr ng-repeat="item in tradedData">
+                                 <td>{{item.id}}</td>
+                                 <td>{{item.creationtime}}</td>
+                                 <td>{{item.side}}</td>
+                                 <td>{{item.symbol}}</td>
+                                 <td>{{item.quantity}}</td>
+                                 <td>{{item.quantityPlaced}}</td>
+                                 <td>{{item.quantityExecuted}}</td>
+                                 <td>{{item.limitPrice}}</td>
+                                 <td>{{item.priority}}</td>
+                                 <td>{{item.status}}</td>
+                                 <td>{{item.traderId}}</td>
+                             </tr>
+                         </tbody>
+                     </table>
+                 </div>
+             </div>
+         </div>
+        </div>
+    </div>
+    <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Please enter nuber of order to create</h4>
+        </div>
+        <div class="modal-body">
+          <input type="text" ng-model='nuOfOrders' class="form-control"></input>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" ng-click='createOrders()' data-dismiss="modal">Create</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

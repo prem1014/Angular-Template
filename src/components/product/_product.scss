@@ -1,0 +1,36 @@
+.panel-default >.product-panel{
+	height: 35px;
+	background-color:$panel-bg-color;
+    border-color: #797777;;
+    border-top-right-radius: 0px; 
+    border-top-left-radius: 0px; 
+}
+
+.btn-panel{
+	background-color:$panel-bg-color;
+    /* padding: 5px; */
+    padding-top: 5px;
+    height: 35px;
+    margin-left: 0px; 
+    margin-right: 0px; 
+}
+
+.grid-container{
+	margin-right: -30px;
+    margin-left: -30px;
+}
+
+.panel-body{
+	padding-top:0px;
+}
+
+.tbl-header{
+	background-color: #7D7D7D;
+    height: 25px;
+    color: black;
+    font-size: 14px;
+}
+
+.toggleTblChartBtnColor{
+	background-color:grey;
+}
